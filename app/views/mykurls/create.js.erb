@@ -1,24 +1,30 @@
-var txt = "";
-txt+=  ' <div class="span-12 last url for-grey font-size-large air-15" id="<%=@mykurl.id%>">';
-       
-txt+=              '<div class="span-8" style="font-size:30px;">';
-txt+=                'http://myk.is/<%=@mykurl.token%>';
-txt+=              '</div>';
-txt+=              '<div class="span-2 last"style="font-size:30px;">';
-              
-txt+=              '<%=@mykurl.clicks%>';
-txt+=              '</div>';
-             
-              
-txt+=              '<div class="span-12 last"><%=@mykurl.url%></div>';
-txt+=        '</div>';
+<%unless @mykurl.nil?%>
+    var txt = "";
+    txt+=  ' <div class="span-12 last url for-grey font-size-large air-15" id="<%=@mykurl.id%>">';
+           
+    txt+=              '<div class="span-8" style="font-size:30px;">';
+    txt+=                'http://myk.is/<%=@mykurl.token%>';
+    txt+=              '</div>';
+    txt+=              '<div class="span-2 last"style="font-size:30px;">';
+                  
+    txt+=              '<%=@mykurl.clicks%>';
+    txt+=              '</div>';
+                 
+                  
+    txt+=              '<div class="span-12 last"><%=@mykurl.url%></div>';
+    txt+=        '</div>';
 
 
 
-$("#mykurlcontainer").prepend(txt);
+    $("#mykurlcontainer").prepend(txt);
 
 
 
 
-$("#mykurlresponse").html('<h2><%=flash[:notice]%></h2><br/><br/>');
+    $("#mykurlresponse").html('<h2 style="color: #8cc63f;"><%=flash[:notice]%></h2><br/><br/>');
 
+
+<%else%>
+    $("#mykurlresponse").html('<h2 style="color: #D83939;"><%=flash[:notice]%></h2><br/><%=@mykurl.error_messages%><br/>');
+
+<%end%>
