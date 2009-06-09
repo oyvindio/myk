@@ -1,4 +1,14 @@
 class MykurlsController < ApplicationController
+
+   #when clicking on a shorturl you end up here - 
+  #this is where we direct you to the right challenge  
+  #or to a failure message - selling something?
+  def mykurl
+    
+
+  end
+  
+
   # GET /mykurls
   # GET /mykurls.xml
   def index
@@ -13,12 +23,17 @@ class MykurlsController < ApplicationController
   # GET /mykurls/1
   # GET /mykurls/1.xml
   def show
-    @mykurl = Mykurl.find(params[:id])
+    @mykurl = Mykurl.find_by_token(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @mykurl }
+         
+    if @mykurl.nil?
+            flash[:notice]  = "The url was not found ... " 
+            redirect_to root_path
+    else
+            @mykurl.update_data(request)
+            redirect_to @mykurl.url
     end
+    
   end
 
   # GET /mykurls/new
