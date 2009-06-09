@@ -21,7 +21,7 @@ Rails::Initializer.run do |config|
   
   config.i18n.load_path << Dir[File.join(RAILS_ROOT, 'my', 'locales', '*.{rb,yml}')]
   config.i18n.default_locale = "no"
-  config.action_controller.relative_url_root = "/reklame" unless RAILS_ENV == 'development'
+  #config.action_controller.relative_url_root = "/reklame" unless RAILS_ENV == 'development'
  
   # Specify gems that this application depends on and have them installed with rake gems:install
   # config.gem "bj"
