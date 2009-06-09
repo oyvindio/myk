@@ -9,6 +9,8 @@ raw_config = File.read(RAILS_ROOT + "/config/config.yml")
 APP_CONF = YAML.load(raw_config)[RAILS_ENV]
 
 Rails::Initializer.run do |config|
+  config.gem 'paperclip'
+  config.gem 'mislav-will_paginate', :lib => 'will_paginate', :source => 'http://gems.github.com'
   config.gem 'authlogic'
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
