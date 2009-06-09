@@ -3,7 +3,7 @@ class CreateUsers < ActiveRecord::Migration
     create_table :users do |t|
       t.timestamps
       t.string :username
-      t.string :email, :default => "", :null => false
+      t.string :login, :default => "", :null => false
       t.string :crypted_password, :null => false
       t.string :password_salt, :null => false
       t.string :persistence_token, :null => false
@@ -20,7 +20,7 @@ class CreateUsers < ActiveRecord::Migration
     add_index :users, :persistence_token
     add_index :users, :last_request_at
     add_index :users, :perishable_token
-    add_index :users, :email
+    add_index :users, :login
   end
  
   def self.down
