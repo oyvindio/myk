@@ -41,14 +41,17 @@ class MykurlsController < ApplicationController
   # POST /mykurls.xml
   def create
     @mykurl = Mykurl.new(params[:mykurl])
-
+    @mykurl.token = Mykurl.generate_token
     respond_to do |format|
       if @mykurl.save
-        flash[:notice] = 'Mykurl was successfully created.'
+        flash[:notice] = 'Url was successfully shortened.'
         format.html { redirect_to(@mykurl) }
+        format.js { return :text => "Url shortened"  }
         format.xml  { render :xml => @mykurl, :status => :created, :location => @mykurl }
       else
+        flash[:notice] = 'Mykurl was NOT successfully created.'
         format.html { render :action => "new" }
+        format.js { return :text => "Url was not shortened"  }
         format.xml  { render :xml => @mykurl.errors, :status => :unprocessable_entity }
       end
     end
