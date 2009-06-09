@@ -1,0 +1,225 @@
+"no":
+  
+  authlogic:
+    error_messages:
+      email_invalid: "må være en ekte e-post-adresse"
+          
+  #"Worlds smallest design byrå"
+  title: "Verdens minste reklamebyrå"
+  
+  #"Must be atleast 3 days ahead in time"
+  deadline: "må være minst 3 dager frem i tid"
+  
+  #challenge sucessfully created
+  chal_suc_cre: "Konkurransen ble aktivert"
+  #"Contribution saved"
+  cont_suc_cre: "Bidraget ble lagret"
+
+  #"Challenge updated"
+  chal_suc_update: "Konkurransen ble oppdatert"
+
+  #Password updated
+  pwd_update: "Passord endret"
+  
+  #"Instructions to reset your password have been emailed to you. "
+  pwd_in_mail: "Nytt passord er nå sendt i en mail til deg"
+  #check your mail
+  check_mail:  "Se i mailboksen din"
+  
+  #"No user was found with that email address"
+  no_user_with_that_mail: "Ingen bruker ble funnet med den e-postadressen"
+  
+  #"We're sorry, but we could not locate your account. "
+  sorry_no_account: "Beklager, vi kan ikke finne kontoen din"
+  #"If you are having issues try copying and pasting the URL "
+  try_copy: "Prøv å klipp ut URL'en fra e-posten og lim den inn i browseren"
+  
+  ###################### MAILER NOTIFIER
+  #"Password Reset Instructions"
+  pwd_reset_instruction: "Instruksjoner for nytt passord"
+  #"add comment"
+  add_comment: "Legg til kommentar"
+  
+  #"add update"
+  add_update:  "Legg til oppdatering"
+  
+  #"you are now logged in"
+  suc_login: "Du er nå logget inn"
+  
+  #you are now logged out
+  suc_logout: "Du er nå logget ut"
+  
+  #register
+  sign_up: "Registrer"
+  
+  #log in
+  log_in: "Logg inn"
+  
+  #log out
+  log_out: "Logg ut"
+  
+  #username
+  username: "Brukernavn"
+  
+  #password
+  password: "Passord"
+  
+  #password verification
+  password_veri: "Gjenta passord"
+  
+  #email
+  email: "E-post"
+  
+  #remember me
+  remember_me: "Husk meg"
+  
+  #"My account"
+  my_account: "Min konto"
+  
+  #"Forgot password"
+  forgot_pwd: "Glemt passord"
+   
+  #"You are now registered"
+  suc_account_reg: "Du er nå registrert"
+  
+  #"You must be logged in to do that"
+  must_be_logged_in: "Du må være logget inn for å se denne siden"
+  
+  #"You must be logged out to do that"
+  must_be_logged_out: "Du må være logget ut for å se denne siden"
+  
+  #"Changes saved"
+  suc_account_update: "Endringer ble lagret"
+  
+  #Do you relly want to delete that?"
+  del_confirm: "Vil du virkelig slette denne?"
+  
+  #"registrer"
+  register: "Registrering"
+  
+  #"send"
+  send: "Send"
+  
+  #choose challenge type
+  choose_chal_type: "Velg prosjekttype"
+  
+  #Sorry, but something went wrong
+  sorry_wrong: "Beklager, en feil oppstod"
+  #"We've been notified about this issue and we'll take a look at it shortly.
+  we_are_notified: "Vi har blitt varslet, om tilfelle og vil se på det snarlig" 
+#####################################################333
+#here follows rails specific translaition
+
+  support:
+    array:
+      sentence_connector: "og"
+  date:
+    formats:
+      default: "%d.%m.%Y"
+      short: "%e. %b"
+      long: "%e. %B %Y"
+    day_names: [søndag, mandag, tirsdag, onsdag, torsdag, fredag, lørdag]
+    abbr_day_names: [søn, man, tir, ons, tor, fre, lør]
+    month_names: [~, januar, februar, mars, april, mai, juni, juli, august, september, oktober, november, desember]
+    abbr_month_names: [~, jan, feb, mar, apr, mai, jun, jul, aug, sep, okt, nov, des]
+    order: [:day, :month, :year]
+  time:
+    formats:
+      default: "%A, %e. %B %Y, %H:%M"
+      time: "%H:%M"
+      short: "%e. %B, %H:%M"
+      long: "%A, %e. %B %Y, %H:%M"
+    am: ""
+    pm: ""
+  datetime:
+    distance_in_words:
+      half_a_minute: "et halvt minutt"
+      less_than_x_seconds:
+        one: "mindre enn 1 sekund"
+        other: "mindre enn {{count}} sekunder"
+      x_seconds:
+        one: "1 sekund"
+        other: "{{count}} sekunder"
+      less_than_x_minutes:
+        one: "mindre enn 1 minutt"
+        other: "mindre enn {{count}} minutter"
+      x_minutes:
+        one: "1 minutt"
+        other: "{{count}} minutter"
+      about_x_hours:
+        one: "rundt 1 time"
+        other: "rundt {{count}} timer"
+      x_days:
+        one: "1 dag"
+        other: "{{count}} dager"
+      about_x_months:
+        one: "rundt 1 måned"
+        other: "rundt {{count}} måneder"
+      x_months:
+        one: "1 måned"
+        other: "{{count}} måneder"
+      about_x_years:
+        one: "rundt 1 år"
+        other: "rundt {{count}} år"
+      over_x_years:
+        one: "over 1 år"
+        other: "over {{count}} år"
+  number:
+    format:
+      precision: 2
+      separator: "."
+      delimiter: ","
+    currency:
+      format:
+        unit: "kr"
+        format: "%n %u"
+    precision:
+      format:
+        delimiter: ""
+        precision: 4
+  activerecord:
+    models:
+      challenge: konkurransen
+      contribution: bidraget
+      user: brukeren
+      award: premie
+    attributes:
+      challenge:
+        title: tittelen
+        deadline: prosjekt-frist
+        public_brief: kreativ briefing
+      award:
+        amount: beløp
+      user:
+        password: passordet
+        password_confirmation: passord bekreftelesen        
+        username: brukernavnet
+        email: e-post-addressen
+        email_invalid: "må være en ekte e-post-addresse"
+    errors:
+      template:
+        header: "kunne ikke lagre {{model}} på grunn av {{count}} feil."
+        body: "det oppstod problemer i følgende felt:"
+      messages:
+        inclusion: "er ikke inkludert i listen"
+        exclusion: "er reservert"
+        invalid: "er ugyldig"
+        confirmation: "passer ikke bekreftelsen"
+        accepted: "må være akseptert"
+        empty: "kan ikke være tom"
+        blank: "kan ikke være blank"
+        too_long: "er for lang (maksimum {{count}} tegn)"
+        too_short: "er for kort (minimum {{count}} tegn)"
+        wrong_length: "er av feil lengde (maksimum {{count}} tegn)"
+        taken: "er allerede i bruk"
+        not_a_number: "er ikke et tall"
+        greater_than: "må være større enn {{count}}"
+        greater_than_or_equal_to: "må være større enn eller lik {{count}}"
+        equal_to: "må være lik {{count}}"
+        less_than: "må være mindre enn {{count}}"
+        less_than_or_equal_to: "må være mindre enn eller lik {{count}}"
+        odd: "må være oddetall"
+        even: "må være partall"
+        
+  #    models:
+ #     attributes:
