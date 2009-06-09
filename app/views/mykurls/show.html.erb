@@ -1,0 +1,33 @@
+<p>
+  <b>Url:</b>
+  <%=h @mykurl.url %>
+</p>
+
+<p>
+  <b>Clicks:</b>
+  <%=h @mykurl.clicks %>
+</p>
+
+<p>
+  <b>Tweets:</b>
+  <%=h @mykurl.tweets %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @mykurl.user_id %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%=h @mykurl.state %>
+</p>
+
+<p>
+  <b>Token:</b>
+  <%=h @mykurl.token %>
+</p>
+
+
+<%= link_to 'Edit', edit_mykurl_path(@mykurl) %> |
+<%= link_to 'Back', mykurls_path %>

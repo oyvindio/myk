@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  url: MyString
+  clicks: 1
+  tweets: 1
+  user_id: 1
+  state: MyString
+  token: MyString
+
+two:
+  url: MyString
+  clicks: 1
+  tweets: 1
+  user_id: 1
+  state: MyString
+  token: MyString

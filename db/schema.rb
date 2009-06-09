@@ -9,7 +9,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090609053042) do
+ActiveRecord::Schema.define(:version => 20090609073245) do
+
+  create_table "mykurls", :force => true do |t|
+    t.string   "url"
+    t.integer  "clicks"
+    t.integer  "tweets"
+    t.integer  "user_id"
+    t.string   "state"
+    t.string   "token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.datetime "created_at"

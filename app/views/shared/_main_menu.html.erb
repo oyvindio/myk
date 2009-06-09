@@ -1,0 +1,28 @@
+		
+		<%if current_user && current_marketplace%>
+		
+		
+		<ul id="mainmenulist">
+			
+			    <li><%=link_to "Challenges" ,challenges_path%></li>
+			    
+			    <%if current_marketplace.has_role_access?(current_user,['owner','creator'])%>
+			    
+			        <li><%=link_to "New Challenge",new_challenge_path%></li>
+			    
+			    <%end%>
+			    
+			    <%if current_marketplace.has_role_access?(current_user,['owner'])%>
+			      
+			      <li><%=link_to (current_marketplace.crowd_alias || "Crowds"),crowds_path%></li>
+			    
+			    <%end%>
+			
+			
+			
+		</ul>
+
+      <%else%>
+      <br/>      
+      <%end%>
+

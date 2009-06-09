@@ -1,0 +1,354 @@
+/*------------------------------------------------------------------*/
+/*---------------------------votes----------- -- -----------------*/
+/*-----------------------------score------------------------------*/
+
+.score-sign{
+
+  color: #fff;
+  height: 60px;
+  font-size: 40px;
+  font: bold;
+  text-align: center;
+  padding-top: 10px;
+  /*border: 5px solid #CCC;*/
+	/*width: 200px;*/
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+  
+}
+
+/*------------------------------------------------------------------*/
+/*---------------------------challenge----------- -- -----------------*/
+/*-----------------------------index------------------------------*/
+
+.challenge_details { 
+  padding-top: 10px; 
+  color: #999; 
+  text-transform: uppercase; 
+  font-size: 10px; 
+  background: url(/static/images/hist_subhead_border.gif) 0 0 no-repeat; 
+  }
+
+
+/*------------------------------------------------------------------*/
+/*---------------------------"table"----------- -- -----------------*/
+/*------------------------------------------------------------------*/
+
+.odd{
+  background: #f7f7f7;
+}
+
+.even{
+
+}
+
+.logo_link a{
+  color: #333;
+  text-decoration: none;
+}
+
+.logo_link a:hover{
+  color: #333;
+  text-decoration: underline;
+}
+
+
+/*------------------------------------------------------------------*/
+/*---------------------------the bennetifs----- -- -----------------*/
+/*------------------------------------------------------------------*/
+
+.readme p{
+  font-size: 16px;
+  line-height: 1.5em;	
+  margin-bottom: 20px;	
+}
+
+div#front_under_sell {
+
+	padding: 20px 0;
+	background: #f7f7f7;
+	border: 1px solid #EEE;
+	border-style: solid none none none;
+	float: left;
+	width:100%;	
+}		
+
+/*------------------------------------------------------------------*/
+/*---------------------------value propositions -- -----------------*/
+/*------------------------------------------------------------------*/
+
+div#who {
+	clear: both;
+}
+
+div#who div.center_box {
+	border: 1px solid #EEE;
+	border-style: dashed none none none;	
+	padding-top: 20px;	
+}
+
+ul#quote_list {
+	margin: 0 auto;	
+}
+
+ul#quote_list li {
+	margin-bottom: 20px;
+	clear: left;
+	height: 60px;
+}	
+
+p.testimonial_logo {
+	width: 60px;
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+p.testimonial_logo img {
+	border: 5px solid #eee;
+	display: block;	
+}
+
+p.quote {
+	float: left;
+	width: 910px;
+	padding: 10px 0 0 0;
+}
+
+p.quote cite {
+	display: block;
+	padding: 2px 0 0 7px;	
+}
+
+
+/*------------------------------------------------------------------*/
+/*---------------------------footer -- -----------------------------*/
+/*------------------------------------------------------------------*/
+
+div.foot {
+	clear: both;
+	padding: 13px 0 0 0;	
+	background: #464646;	
+  height: 30px;
+  color: #696969;	
+  margin-top: 60px;
+}
+
+div.foot a {
+	color: #999;	
+  font-size: 12px;
+}
+
+body.login {
+	/*border-top-color: #464646;*/
+}
+
+body {
+	border-top-width: 30px;
+	border-top-style: solid;
+	border-bottom-width: 30px;
+	border-bottom-style: solid;
+	font: 11px "Lucida Grande", Verdana, Arial, "Bitstream Vera Sans", sans-serif;
+  border-top-color: #464646;
+  border-bottom-color: #464646;
+ /*background-color:#F9F9F9;*/
+}
+
+html {
+  /*background-color:#F9F9F9;*/
+}
+
+.top_left{
+	top: 7px;
+	left: 15px;
+}
+.top_right{
+	top: 7px;
+	right: 15px;
+
+}
+
+.on_top {
+	position: absolute;
+	text-decoration: none;
+  color: #ccc;
+}
+
+.on_top a {
+	text-decoration: none;
+  color: #ccc;
+}
+
+.on_top a:hover{
+color: #fff;
+}
+#backtoblog a {
+	position: absolute;
+	top: 7px;
+	left: 15px;
+	text-decoration: none;
+}
+.login #backtoblog a {
+	color: #ccc;
+}
+
+
+.login #backtoblog a:hover,
+#plugin-information .action-button a,
+#plugin-information .action-button a:hover,
+#plugin-information .action-button a:visited {
+	color: #fff;
+}
+
+
+/*http://rondeventure.com/wp-admin/css/login.css?ver=20081210*/
+/*http://rondeventure.com/wp-admin/css/colors-fresh.css?ver=20081210*/
+/*------------------------------------------------------------------*/
+/*---------------------------frontpage -----------------------------*/
+/*------------------------------------------------------------------*/
+
+h1.noice {
+	font-size: 50px;	
+	letter-spacing: -0.07em;	
+	line-height: 0.95em;	
+}
+p.noice_describtion{
+  margin: 10px 0 8px 0;
+  color: #333;
+  font-size: 22px;
+  line-height: 1.2em;	
+}
+
+div.headline{
+  text-align: left;
+  font-size: 42px;
+
+}
+
+div#front_sell{
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/*------------------------------------------------------------------*/
+/*----------------------------comments------------------------------*/
+/*------------------------------------------------------------------*/
+
+div.comment{
+
+  background:#FFFFDD;
+  margin-left: 30px;
+  margin-top: 20px;
+  padding: 15px;  
+  
+}
+.comment_button{
+  text-decoration: underline;
+  cursor: hand;cursor:pointer;
+}
+
+/*------------------------------------------------------------------*/
+/*-------------------------------contribution-----------------------*/
+/*------------------------------------------------------------------*/
+div.contribution h3{
+	font-size: 18px;
+  font-family: Georgia, Times;
+  font-weight: normal;
+  padding: 5px 0;	
+}
+
+div.contribution strong{
+color: #333;
+}
+
+div.contribution p{
+color: #696969;
+}
+
+
+div.for-grey{
+  color: #999;
+}
+
+div.for-darkgrey{
+  color: #333;
+}
+
+div.grey{
+  background: #999;
+}
+
+div.darkgrey{
+  background: #333;
+}
+
+
+div.box{
+	border: 5px solid #CCC;
+	float: left;
+	margin: 0 15px 0 0;
+	/*width: 200px;*/
+	height: 138px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+div.box a:hover {
+	border: 5px solid #999;	
+}
+
+div.boxtext h2{
+  font-size: 22px;	
+}
+
+div.boxtext p{
+  font-size: 16px;	
+  /*color: #696969;*/	
+}
+
+div.boxtext p strong{
+  	
+  color: #333;	
+}
+
+div.flatlist{
+  list-style-type: none;
+  display: inline;
+  margin: 0 10px 0 0;
+}
+div.quietmenu{
+  color: #666;
+}
+ul#challengeindexmenu li{
+  list-style-type: none;
+  display: inline;
+  margin: 0 10px 0 0;
+}
+
+div#submenu{
+  text-align: right;
+
+}
+div#mainmenu{
+  text-align: right;
+  background: #333;
+  
+  padding-top:10px;   
+  padding-bottom:10px;
+}
+
+
+div#mainmenu a{
+color: #999;
+}
+
+ul#mainmenulist {
+	height: 30px;
+}
+
+ul#mainmenulist li {
+	display: inline;
+	margin:  10px 0 0;
+}
+
+div.air-5{padding-top: 5px;padding-bottom: 5px;}
+div.air-10{padding-top: 10px;padding-bottom: 10px;}
+div.air-15{padding-top: 15px;padding-bottom: 15px;}

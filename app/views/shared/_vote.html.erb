@@ -1,0 +1,15 @@
+
+
+<%form_tag vote_contribution_path(contribution),:method=>:put do %>
+  
+  <%= select_tag("votes",
+  options_for_select(@challenge.vote_options(current_user,contribution),
+  
+  contribution.user_vote(current_user)), :id=>"#{contribution.id}",:class=>"voter") 
+  
+  
+  %>
+  
+
+<%end%>
+

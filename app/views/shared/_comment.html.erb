@@ -1,0 +1,38 @@
+<div id="contribution_comment_link_c" class="flatlist quietmenu">
+    <small><quiet>
+    
+    <a class="comment_button"  id="<%=contribution.id%>"><%=pluralize(contribution.comments.size, 'comment','comments')%></a>
+    
+    
+    </quiet></small>
+  
+  
+  <div  id = "comment_div_<%=contribution.id%>" style="display: none;">
+    <%form_for [contribution.challenge,contribution] do |f|%>
+      <%f.fields_for :comments,@comment do |cf|%>
+        <%=cf.text_field :describtion%>
+        <%=cf.submit "Comment"%>
+      <%if current_user%>
+        <%=cf.hidden_field :creator_id,:value=>current_user.id%>
+      <%end%>
+      <%end%>
+    <%end%>
+  <%for comment in contribution.comments%>
+    <div class="comment span-8 last">
+    <p><%=comment.describtion%></p>
+    <p><small>
+          by <%unless comment.creator.nil?%>
+                <%=comment.creator.username%>
+              <%else%>  
+              
+                "skybert"
+             <%end%>
+          | <%=comment.created_at%>
+                            
+              
+              
+       </small></p>
+    </div>
+  <%end%>
+  </div>
+  </div>

@@ -1,0 +1,6 @@
+
+<%if current_user && current_user.has_role?('superadmin')%>
+  You are so superadmin: <%=link_to "Templates", challengetemplates_path%> |
+  <%=link_to "Users", '/admin/users'%> |
+  <%=link_to "Challenges", '/admin/challenges'%>
+<%end%>

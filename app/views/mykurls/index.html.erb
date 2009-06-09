@@ -1,0 +1,30 @@
+<h1>Listing mykurls</h1>
+
+<table>
+  <tr>
+    <th>Url</th>
+    <th>Clicks</th>
+    <th>Tweets</th>
+    <th>User</th>
+    <th>State</th>
+    <th>Token</th>
+  </tr>
+
+<% @mykurls.each do |mykurl| %>
+  <tr>
+    <td><%=h mykurl.url %></td>
+    <td><%=h mykurl.clicks %></td>
+    <td><%=h mykurl.tweets %></td>
+    <td><%=h mykurl.user_id %></td>
+    <td><%=h mykurl.state %></td>
+    <td><%=h mykurl.token %></td>
+    <td><%= link_to 'Show', mykurl %></td>
+    <td><%= link_to 'Edit', edit_mykurl_path(mykurl) %></td>
+    <td><%= link_to 'Destroy', mykurl, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New mykurl', new_mykurl_path %>

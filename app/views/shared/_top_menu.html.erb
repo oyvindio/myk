@@ -1,0 +1,13 @@
+
+<%if current_user%>
+  <%if current_marketplace.has_role_access?(current_user,['owner'])%>  
+    <%= link_to "Settings for #{current_marketplace.title}",edit_marketplace_path(current_marketplace)%> | 
+  <%end%>
+
+  <%= link_to "Log out", logout_path%> 
+<%else%>
+  <%= link_to_unless_current "Log in", login_path%> 
+  <%unless APP_CONF['settings']['in_beta']==true%>
+      | <%= link_to_unless_current "Registrer deg", signup_path%>
+  <%end%>
+<%end%>

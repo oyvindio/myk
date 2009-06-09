@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>InnoCrowd</title>
+  
+ 
+  <%=javascript_include_tag :defaults, 'delegate'%>
+  <%=javascript_include_tag 'facebox'%>
+  <%=stylesheet_link_tag 'main'%>
+<%=stylesheet_link_tag 'facebox.css'%> 
+  <%=stylesheet_link_tag 'blueprint/src/forms'%>
+<%=stylesheet_link_tag 'innocrowd'%>
+</head>
+<body class="login">
+
+  <p id="backtoblog">
+      <%=link_to "Log in", login_path,:title=>"Allready inside? Log in here"%>  
+  </p>
+
+<div class="span-24 last">
+<%=flash[:error]%>        
+<%=flash[:notice]%>        
+       </div>
+       
+<div id="header">
+    
+   
+<%=image_tag('/images/ic_bubble_dark.png',:width=>'200') %>    
+
+</div>
+
+<div class="container">
+    
+    
+    <div class="span-24 last">
+    <%=yield%>
+    </div>
+    
+    
+    
+
+    
+</div>
+
+
+
+<div id="front_under_sell">
+    <div class="container">
+        <div class="span-24 last">
+            <%=yield(:under_sell)%>
+        </div>
+    </div>
+</div>
+
+
+<div class="last foot">
+
+	
+	        <%=render :partial => 'shared/footer'%>
+</div>
+
+</body>
+</html>

@@ -1,1 +1,82 @@
-<h1>velkommen</h1>
+<script type="text/javascript" src="http://localhost:3000/widgets.js"></script>
+        
+        <style type="text/css">
+          .customCSSclass a{text-decoration:none;}
+        </style>
+
+
+<div id="front_sell" class="span-24 last">
+      <div  class="span-12">
+        
+            <h1 class="noice">myk . is</h1>
+            <p  class="noice_describtion">
+            Don't mess with climate - shorten your url's
+            </p>
+			
+            myk . is is norwegian for soft . ice      
+			    <%=link_to (image_tag('/images/ic_signup_button.png',:border=>0)), signup_path%>
+      
+      
+      <p>
+      
+      <%remote_form_for @mykurl do%>
+          <%=f.label :url%><br/>
+          <%=f.text_field :url,:class=>"text" %>
+          <%=f.submit "Shorten"%>
+      <%end%>
+      
+      </p>
+      <div id="mykurl">
+      </div>
+      </div>
+      
+      <div class="span-12 last air-15">
+            <%=image_tag('/images/glacier.jpg',:title=>"The powerful Briksdal Glacier is a part of the Jostedal Glacier National Park in Norway")%>
+      </div>
+</div>
+
+
+
+
+
+
+
+<%content_for :under_sell do%>
+
+<div class="air-15 readme">
+     <p ><strong>Do you think it is important to involve as many brains as possible in your business?</strong> Brains means knowledge means potential for innovation. InnoCrowd is an engine to reap that energy. <strong style="color: #8cc63f;">With InnoCrowd you'll be able to&hellip;</strong></p>
+
+    <div class="span-24 air-15 last">
+          <div class="span-4">
+                    <%=image_tag('/images/ic_bubble_alpha_white.png',:width=>'150',:heigth=>'150px')%>
+          </div>
+          
+          <div class="span-20 last readme">
+                <h1>Create Private Innovation Challenges</h1>
+			      <p>Invite <strong style="color: #8cc63f;">customers, employees</strong> and others to participate in race for towards the new and unknown.</p>
+          </div>
+    </div>
+    <div class="span-24 air-15 last">
+    <div class="span-4">
+              <%=image_tag('/images/ic_bubble_alpha_white.png',:width=>'150',:heigth=>'150px')%>
+    </div>
+    
+    <div class="span-20 last readme">
+          <h1>Hire the Innocrowd Global Creative Force</h1>
+			<p>Tap the knowledge of our <strong style="color: #8cc63f;">global creative force</strong> and let them contribute to your challenges.</p>
+
+    </div>
+    </div>
+    <div class="span-24 air-15 last">
+    <div class="span-4">
+              <%=image_tag('/images/ic_bubble_alpha_white.png',:width=>'150',:heigth=>'150px')%>
+    </div>
+    
+    <div class="span-20 readme last">
+      			<h1>Create your own crowdsourcing application</h1>
+			<p>Advanced users can create a fully functional <strong style="color: #8cc63f;">crowdsourcing</strong> application.</p>
+    </div>
+    </div>
+</div>   
+
+<%end%>

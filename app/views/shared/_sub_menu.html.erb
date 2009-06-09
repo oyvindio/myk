@@ -1,0 +1,6 @@
+<%=yield(:submenu)%>
+<%if current_user && current_user.has_role?('superadmin')%>
+  <br/>
+  <%=link_to "Templates", challengetemplates_path%>
+  <%=link_to "Users", '/admin/users'%>
+<%end%>

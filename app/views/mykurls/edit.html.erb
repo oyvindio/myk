@@ -1,0 +1,36 @@
+<h1>Editing mykurl</h1>
+
+<% form_for(@mykurl) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </p>
+  <p>
+    <%= f.label :clicks %><br />
+    <%= f.text_field :clicks %>
+  </p>
+  <p>
+    <%= f.label :tweets %><br />
+    <%= f.text_field :tweets %>
+  </p>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.label :token %><br />
+    <%= f.text_field :token %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @mykurl %> |
+<%= link_to 'Back', mykurls_path %>
