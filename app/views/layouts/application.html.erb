@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title><%=I18n.t 'title'%></title>
+  
+
+  <%= javascript_include_tag :defaults %>
+  
+<link href="http://www.kunstig.no/c/standard.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+<div class="container">
+    
+    <div class="content">
+      <span style="float: right; text-align: right;">
+      <%= render :partial => "shared/top_menu"%>    
+      </span>
+    </div>
+
+    <div class = "content">
+     
+    </div>
+     
+    <div class = "content">
+      <%= render :partial => "shared/main_menu"%>
+      <p style="color: green"><%= flash[:notice] %></p>
+    </div>
+  	
+ <div class="content_padding">
+      &nbsp;
+    </div>
+    
+    <div class="content">
+    	<%= yield  %>
+    </div>
+    
+    <div class="content_padding">
+      &nbsp;
+    </div>
+    
+    <div class="content">
+    	hei
+    </div>
+    
+</div>
+
+<div class="navbar_bottom">
+ 	<p>Om gråblyanten - Hjelp - Community - Tips en venn - Nyhetsbrev - Kontakt oss</p>
+</div>
+
+
+</body>
+</html>
