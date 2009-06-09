@@ -8,10 +8,18 @@ require File.join(File.dirname(__FILE__), 'boot')
 raw_config = File.read(RAILS_ROOT + "/config/config.yml")
 APP_CONF = YAML.load(raw_config)[RAILS_ENV]
 
+include Rubaidh
+Rubaidh::GoogleAnalytics.tracker_id = 'UA-9237661-2'
+
+
 Rails::Initializer.run do |config|
   config.gem 'paperclip'
   config.gem 'mislav-will_paginate', :lib => 'will_paginate', :source => 'http://gems.github.com'
+  config.gem 'rubaidh-google_analytics', :lib => 'rubaidh/google_analytics', :source => 'http://gems.github.com'
   config.gem 'authlogic'
+
+  
+
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.
