@@ -1,6 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :mykurls
-
+  map.connect '/:id', :controller=>'home'
+  
   map.resource :profile, :controller => "users"
 
   map.resources :password_resets

@@ -1,23 +1,34 @@
 class HomeController < ApplicationController
   def index
     
-    @mykurls = []
+    @mykurl = Mykurl.find_by_token(params[:id])
     
-    tokens = Mykurl.read_cookies(cookies)
+    flash[:notice] = @mykurl
+         
+            if @mykurl.nil?
+                    @mykurls = []
     
-    #flash[:notice] = @the_coockies
-          tokens.each do |token|
-      
-                @tmp_url = Mykurl.find_by_token(token);
+                    tokens = Mykurl.read_cookies(cookies)
+    
+                    tokens.each do |token|
                 
-                unless @tmp_url.nil?
-                  @mykurls << @tmp_url
-                end
+                          @tmp_url = Mykurl.find_by_token(token);
+                          
+                          unless @tmp_url.nil?
+                            @mykurls << @tmp_url
+                          end
+              
+                     end
     
-           end
     
-    
-    @mykurl = Mykurl.new
-  end
+                     @mykurl = Mykurl.new
+ 
+                    
+            else
+                    @mykurl.update_data(request)
+                    redirect_to @mykurl.url
+            end
+
+   end
   
 end

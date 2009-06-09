@@ -57,6 +57,12 @@ class MykurlsController < ApplicationController
   def create
     @mykurl = Mykurl.new(params[:mykurl])
     @mykurl.token = Mykurl.generate_token
+    
+    unless @mykurl.url[0..6]=="http://"
+      new_url = "http://" + @mykurl.url
+      @mykurl.url = new_url
+    end
+    
     respond_to do |format|
       if @mykurl.save
         #create a coockie if user not logged in, save for 2 weeks
