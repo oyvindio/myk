@@ -1,0 +1,13 @@
+<%= form.label t('email')+' / '+t('username') %><br />
+<%= form.text_field :login %><br />
+<br />
+<%= form.label t('password'), form.object.new_record? ? nil : "Change password" %><br />
+<%= form.password_field :password %><br />
+<br />
+<%= form.label t('password_veri') %><br />
+<%= form.password_field :password_confirmation %><br />
+<br />
+<%= form.label t('fullname') %><br />
+<%= form.text_field :username %><br />
+<br />
+

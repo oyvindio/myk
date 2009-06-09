@@ -9,6 +9,7 @@ raw_config = File.read(RAILS_ROOT + "/config/config.yml")
 APP_CONF = YAML.load(raw_config)[RAILS_ENV]
 
 Rails::Initializer.run do |config|
+  config.gem 'authlogic'
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.
