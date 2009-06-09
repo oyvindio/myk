@@ -61,7 +61,12 @@ class MykurlsController < ApplicationController
       if @mykurl.save
         #create a coockie if user not logged in, save for 2 weeks
         unless current_user
-        cookies[:mykurls] = { :value => @mykurl.token, :expires => Time.now + ((3600*24)*7*2)}
+            if cookies[:mykurls].blank?
+              cookies[:mykurls] = { :value => @mykurl.token, :expires => Time.now + ((3600*24)*7*2)}
+            else
+              Mykurl.write_cookies(cookies, @mykurl.token)
+            end
+            
         end
         
         flash[:notice] = 'Url was successfully shortened.'
@@ -70,7 +75,7 @@ class MykurlsController < ApplicationController
         format.xml  { render :xml => @mykurl, :status => :created, :location => @mykurl }
       else
         flash[:notice] = 'Mykurl was NOT successfully created.'
-        
+        @mykurl = nil
         format.html { render :action => "new" }
         format.js { return :text => "Url was not shortened"  }
         format.xml  { render :xml => @mykurl.errors, :status => :unprocessable_entity }

@@ -20,10 +20,19 @@ class Mykurl < ActiveRecord::Base
       return false
     end
   end
-
+  
   def update_data(request)
     self.clicks+=1
     self.save
     #Location.create_from_shorturl(self,request)    
   end
+  
+  def self.write_cookies(cookie_box,token)
+    cookie_box[:mykurls] = cookie_box[:mykurls].to_s.split(',').push(token.to_s).join(',')
+  end
+
+  def self.read_cookies(cookie_box)
+    cookie_box[:mykurls].to_s.split(',')
+  end
+  
 end
