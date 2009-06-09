@@ -36,35 +36,31 @@
       
       <div class="span-12 last for-grey" style="text-transform: uppercase; ">
        
-              <div class="span-6 ">
+              <div class="span-8 ">
                 Url
               </div>
-              <div class="span-2 ">
+              <div class="span-2 last">
               Clicks
               </div>
-              <div class="span-2 last">
-              &nbsp;
-              </div>
+              
       </div>
-        
+      <div id="mykurlcontainer">
       <%for url in Mykurl.all%>
        <div class="span-12 last url for-grey font-size-large air-15" id="<%=url.id%>">
        
-              <div class="span-6" style="font-size:30px;">
-                myk.is/<%=url.token%>
+              <div class="span-8" style="font-size:30px;">
+                http://myk.is/<%=url.token%>
               </div>
-              <div class="span-2 "style="font-size:30px;">
+              <div class="span-2 last"style="font-size:30px;">
               
               <%=url.clicks%>
               </div>
-              <div class="span-2 last"style="font-size:30px;">
-              &nbsp;
-              <%=url.tweets%>
-              </div>
+             
               
               <div class="span-12 last"><%=url.url%></div>
         </div>
       <%end%>
+      </div>
       </div>
       
       
