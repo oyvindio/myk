@@ -8,8 +8,6 @@ require File.join(File.dirname(__FILE__), 'boot')
 raw_config = File.read(RAILS_ROOT + "/config/config.yml")
 APP_CONF = YAML.load(raw_config)[RAILS_ENV]
 
-include Rubaidh
-Rubaidh::GoogleAnalytics.tracker_id = 'UA-9237661-2'
 
 
 Rails::Initializer.run do |config|
