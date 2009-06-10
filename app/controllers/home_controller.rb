@@ -31,4 +31,7 @@ class HomeController < ApplicationController
 
    end
   
+  def cron
+    return render :text => "cron"
+  end
 end
