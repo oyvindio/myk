@@ -35,4 +35,9 @@ class Mykurl < ActiveRecord::Base
     cookie_box[:mykurls].to_s.split(',')
   end
   
+   #used to prevent passenger to fall asleep. crontab calls this every 9 minutes
+   def self.wake_up
+      return 0
+   end
+  
 end
