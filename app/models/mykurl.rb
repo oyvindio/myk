@@ -1,7 +1,7 @@
 class Mykurl < ActiveRecord::Base
   validates_presence_of :url
   
-  default_scope :order=>"created_at DESC"
+  
 
   #generates a hash of 5 strings until it finds one that is not taken
   def self.generate_token
