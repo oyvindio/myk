@@ -20,7 +20,7 @@ class HomeController < ApplicationController
               
                      end
     
-    
+                     @mykurls = @mykurls.reverse
                      @mykurl = Mykurl.new
  
                     
