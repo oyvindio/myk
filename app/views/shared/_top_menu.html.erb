@@ -6,7 +6,7 @@
 
   <%= link_to "Log out", logout_path%> 
 <%else%>
-  <%= link_to_unless_current "Log in", login_path%> 
+  
   <%unless APP_CONF['settings']['in_beta']==true%>
       | <%= link_to_unless_current "Registrer deg", signup_path%>
   <%end%>
