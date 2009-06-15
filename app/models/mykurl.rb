@@ -28,7 +28,7 @@ class Mykurl < ActiveRecord::Base
   end
   
   def self.write_cookies(cookie_box,token)
-    cookie_box[:mykurls] = cookie_box[:mykurls].to_s.split(',').push(token.to_s).join(',')
+    cookie_box[:mykurls] = {:value => cookie_box[:mykurls].to_s.split(',').push(token.to_s).join(','), :expires => Time.now + ((3600*24)*7*2*2)}
   end
 
   def self.read_cookies(cookie_box)

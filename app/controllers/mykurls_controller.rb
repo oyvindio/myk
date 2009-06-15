@@ -68,7 +68,7 @@ class MykurlsController < ApplicationController
         #create a coockie if user not logged in, save for 2 weeks
         unless current_user
             if cookies[:mykurls].blank?
-              cookies[:mykurls] = { :value => @mykurl.token, :expires => Time.now + ((3600*24)*7*2)}
+              cookies[:mykurls] = { :value => @mykurl.token, :expires => Time.now + ((3600*24)*7*2*2*2)}
             else
               Mykurl.write_cookies(cookies, @mykurl.token)
             end
