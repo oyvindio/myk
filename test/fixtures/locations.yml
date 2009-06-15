@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  lat: MyString
+  lng: MyString
+  mykurl_id: 1
+  city: MyString
+  country: MyString
+  ip: MyString
+  domain: MyString
+
+two:
+  lat: MyString
+  lng: MyString
+  mykurl_id: 1
+  city: MyString
+  country: MyString
+  ip: MyString
+  domain: MyString

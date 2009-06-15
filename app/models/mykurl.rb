@@ -1,6 +1,6 @@
 class Mykurl < ActiveRecord::Base
   validates_presence_of :url
-  
+  has_many :locations  
   
 
   #generates a hash of 5 strings until it finds one that is not taken
