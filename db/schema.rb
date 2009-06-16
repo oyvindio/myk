@@ -9,7 +9,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090609082507) do
+ActiveRecord::Schema.define(:version => 20090616202407) do
+
+  create_table "locations", :force => true do |t|
+    t.string   "lat"
+    t.string   "lng"
+    t.integer  "mykurl_id"
+    t.string   "city"
+    t.string   "country"
+    t.string   "ip"
+    t.string   "domain"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "mykurls", :force => true do |t|
     t.string   "url"

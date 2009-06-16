@@ -24,7 +24,7 @@ class Mykurl < ActiveRecord::Base
   def update_data(request)
     self.clicks+=1
     self.save
-    #Location.create_from_shorturl(self,request)    
+    Location.create_from_shorturl(self,request)    
   end
   
   def self.write_cookies(cookie_box,token)
