@@ -6,7 +6,7 @@ def self.create_from_shorturl(shorturl, request)
     geo = GeoData::IpConverter.new()
     location = geo.convert(request.remote_ip)    
     
-    new_location = Location.create!(:shorturl_id=>shorturl.id)
+    new_location = Location.create!(:mykurl_id=>shorturl.id)
     unless new_location.lat==0&&new_location.lng==0    
         new_location.lat        =   location[:latitude] rescue nil
         new_location.lng        =   location[:longitude] rescue nil
