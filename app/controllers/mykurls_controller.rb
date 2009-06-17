@@ -9,16 +9,7 @@ class MykurlsController < ApplicationController
   end
   
 
-  # GET /mykurls
-  # GET /mykurls.xml
-  def index
-    @mykurls = Mykurl.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @mykurls }
-    end
-  end
 
   # GET /mykurls/1
   # GET /mykurls/1.xml
@@ -38,19 +29,8 @@ class MykurlsController < ApplicationController
 
   # GET /mykurls/new
   # GET /mykurls/new.xml
-  def new
-    @mykurl = Mykurl.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @mykurl }
-    end
-  end
 
   # GET /mykurls/1/edit
-  def edit
-    @mykurl = Mykurl.find(params[:id])
-  end
 
   # POST /mykurls.
   # POST /mykurls.xml
