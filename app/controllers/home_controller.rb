@@ -34,4 +34,22 @@ class HomeController < ApplicationController
   def cron
     return render :text => "cron"
   end
+
+  def show_map
+  
+    @url=Mykurl.find_by_token(params[:token])
+    @map = GoogleMap.new
+    for location in @url.locations do
+    
+        unless location.long.nil? || location.long==0 ||  location.lat==0|| location.lat.nil?
+        
+
+        @new_marker = GoogleMapMarker.new(:map => @map, 
+                                     :lat => location.lat, 
+                                     :lng => location.long
+                                     )
+         end
+       end
+                                         
+  end    
 end
