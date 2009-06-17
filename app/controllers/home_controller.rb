@@ -41,12 +41,12 @@ class HomeController < ApplicationController
     @map = GoogleMap.new
     for location in @url.locations do
     
-        unless location.long.nil? || location.long==0 ||  location.lat==0|| location.lat.nil?
+        unless location.lng.nil? || location.lng==0 ||  location.lat==0|| location.lat.nil?
         
 
         @new_marker = GoogleMapMarker.new(:map => @map, 
                                      :lat => location.lat, 
-                                     :lng => location.long
+                                     :lng => location.lng
                                      )
          end
        end
