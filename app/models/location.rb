@@ -16,6 +16,16 @@ def self.create_from_shorturl(shorturl, request)
         new_location.domain =   request.referrer
         new_location.save
     end
+    
+    if request.referrer.include? 'facebook'
+      new_location.mykurl.facebook_count+=1
+      new_location.mykurl.save
+    end
+    
+    if request.referrer.include? 'twitter'
+      new_location.mykurl.twitter_count+=1
+      new_location.mykurl.save
+    end
   end
 
 

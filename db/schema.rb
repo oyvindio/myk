@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090616202407) do
+ActiveRecord::Schema.define(:version => 20090619192040) do
 
   create_table "locations", :force => true do |t|
     t.string   "lat"
@@ -25,13 +25,15 @@ ActiveRecord::Schema.define(:version => 20090616202407) do
 
   create_table "mykurls", :force => true do |t|
     t.string   "url"
-    t.integer  "clicks",     :default => 0
+    t.integer  "clicks",         :default => 0
     t.integer  "tweets"
     t.integer  "user_id"
     t.string   "state"
     t.string   "token"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "twitter_count",  :default => 0
+    t.integer  "facebook_count", :default => 0
   end
 
   create_table "users", :force => true do |t|
