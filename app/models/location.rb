@@ -13,7 +13,7 @@ def self.create_from_shorturl(shorturl, request)
         new_location.country    =   location[:country] rescue nil
         new_location.city       =   location[:city] rescue nil
         new_location.ip         =   request.remote_ip rescue nil
-        new_location.domain =   request.url
+        new_location.domain =   request.request_uri
         new_location.save
     end
   end
