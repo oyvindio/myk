@@ -1,5 +1,5 @@
-class Location < ActiveRecord::Base
 
+class Location < ActiveRecord::Base
   belongs_to :mykurl
 
 def self.create_from_shorturl(shorturl, request)
@@ -12,8 +12,8 @@ def self.create_from_shorturl(shorturl, request)
         new_location.lng        =   location[:longitude] rescue nil
         new_location.country    =   location[:country] rescue nil
         new_location.city       =   location[:city] rescue nil
-        new_location.ip         =   request.env['SERVER_ADDR'] rescue nil
-        new_location.domain =   request.domain
+        new_location.ip         =   request.remote_ip rescue nil
+        new_location.domain =   request.remote_addr
         new_location.save
     end
   end
