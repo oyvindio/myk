@@ -22,7 +22,7 @@ def self.create_from_shorturl(shorturl, request)
       new_location.mykurl.save
     end
     
-    if request.referrer.include? 'twitter'
+    if request.to_s.include? 'twitter'
       new_location.mykurl.twitter_count+=1
       new_location.mykurl.save
     end
