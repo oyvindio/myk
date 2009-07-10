@@ -38,12 +38,12 @@ class HomeController < ApplicationController
   def show_map
   
     @url=Mykurl.find_by_token(params[:token])
-    
+    @map = GoogleMap.new
     for location in @url.locations do
     
-        unless location.lng.nil? || location.lng==0 ||  location.lat==0|| location.lat.nil?
+        unless location.lng.nil? || location.lng==0 ||  location.lat==0|| location.lat.nil?||location.lng.blank? ||location.lng.blank? 
         
-        @map = GoogleMap.new
+        
         @map.markers << GoogleMapMarker.new(:map => @map, 
                                      :lat => location.lat, 
                                      :lng => location.lng,
