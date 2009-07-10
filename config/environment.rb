@@ -12,7 +12,7 @@ APP_CONF = YAML.load(raw_config)[RAILS_ENV]
 
 Rails::Initializer.run do |config|
   config.gem 'paperclip'
-  config.gem 'mislav-will_paginate', :lib => 'will_paginate', :source => 'http://gems.github.com'
+#  config.gem 'mislav-will_paginate', :lib => 'will_paginate', :source => 'http://gems.github.com'
   config.gem 'rubaidh-google_analytics', :lib => 'rubaidh/google_analytics', :source => 'http://gems.github.com'
   config.gem 'authlogic'
 
