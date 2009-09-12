@@ -1,0 +1,3 @@
+[submodule "vendor/clippy"]
+	path = vendor/clippy
+	url = git://github.com/mojombo/clippy.git
